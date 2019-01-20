@@ -18,7 +18,7 @@ import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
 import json from 'rollup-plugin-json';
 import node from 'rollup-plugin-node-resolve';
-import resolve from 'rollup-plugin-node-resolve';
+import sourcemaps from 'rollup-plugin-sourcemaps';
 import typescript from 'rollup-plugin-typescript2';
 import uglify from 'rollup-plugin-uglify';
 
@@ -51,6 +51,7 @@ function config({plugins = [], output = {}, external = []}) {
         include: 'node_modules/**',
         namedExports: {
           './node_modules/seedrandom/index.js': ['alea'],
+          './node_modules/utf8/utf8.js': ['decode'],
           './src/data/compiled_api.js': ['tensorflow'],
           './node_modules/protobufjs/minimal.js': ['roots', 'Reader', 'util']
         },
@@ -59,14 +60,20 @@ function config({plugins = [], output = {}, external = []}) {
       // We need babel to compile the compiled_api.js generated proto file from
       // es6 to es5.
       babel(),
+      sourcemaps(),
       ...plugins,
     ],
     output: {
       banner: copyright,
+      globals: {
+        'node-fetch': 'nodeFetch',
+      },
       sourcemap: true,
       ...output,
     },
     external: [
+      // node-fetch is only used in node. Browsers have native "fetch".
+      'node-fetch',
       'crypto',
       ...external,
     ],
@@ -106,12 +113,14 @@ export default [
       file: 'dist/tf.esm.js',
       globals: {
         '@tensorflow/tfjs-core': 'tf',
+        '@tensorflow/tfjs-data': 'tf.data',
         '@tensorflow/tfjs-layers': 'tf',
         '@tensorflow/tfjs-converter': 'tf'
       }
     },
     external: [
       '@tensorflow/tfjs-core',
+      '@tensorflow/tfjs-data',
       '@tensorflow/tfjs-layers',
       '@tensorflow/tfjs-converter',
     ]

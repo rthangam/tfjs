@@ -6,8 +6,11 @@ Please reach out to us if you'd like to put your project on the list.
 
 ## Demos & Applications
 
+- [TensorSpace.js](https://github.com/tensorspace-team/tensorspace) - A 3D visualization framework for neural networks, featuring interactive and intuitive display of models in the browser. Supports pre-trained models from TensorFlow, Keras, and TensorFlow.js.
+- [Magenta Studio](https://magenta.tensorflow.org/studio) - A collection of music plugins built on Magenta’s open source tools and models using cutting-edge machine learning techniques for music generation.
 - [Move Mirror](https://experiments.withgoogle.com/collection/ai/move-mirror/view) - An AI Experiment with Pose Estimation in the Browser using TensorFlow.js
 - [Emoji Scavenger Hunt](https://emojiscavengerhunt.withgoogle.com/) - Locate the emoji we show you in the real world with your phone’s camera.
+- [Semi-Conductor](https://semiconductor.withgoogle.com/) - Conduct your own orchestra in the browser by moving your arms.
 - [Metacar](https://www.metacar-project.com/) - A reinforcement learning environment for self-driving cars in the browser.
 - [Evolution Simulator](https://github.com/adityathebe/evolutionSimulator) - Evolution Simulator using NeuroEvolution
 - [Play pong with webcam](https://ml4a.github.io/demos/tfjs/regression-pong.html) by Gene Kogan
@@ -32,6 +35,9 @@ Please reach out to us if you'd like to put your project on the list.
 - [Aida](https://aida.dor.ai/) Named entity recognition and text classification pipeline for creating chatbots by Rodrigo Pimentel
 - [GAN Lab](https://poloclub.github.io/ganlab/) - An Interactive Visualization Tool for Playing with Generative Adversarial Networks (GANs)!
 - [Canvas Friends](https://www.y8.com/games/canvas_friends) - Half game, half experiment to see if software can improve the drawing and artistic skills of people.
+- [High School Level Tensorflowjs](http://rocksetta.com/tensorflowjs/) - Greater than 40 demos that can be online edited made as simply as possible using single web pages. All examples use the [<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs">](https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.js) specific version tag so the pages always work and no installation is needed - By Jeremy Ellis.
+- [Gboard Physical Handwriting Version](https://landing.google.co.jp/tegaki/) - You can input a character by drawing it on your keyboard.
+- [AICAMCAM](https://aicamcam.github.io) - A browser-based webcam video recording service with people/dog/cat detection functionality.
 
 ## Tutorials
 
@@ -63,6 +69,7 @@ These tutorials augment the [official tutorials](https://js.tensorflow.org/tutor
 - [Getting Started with TensorFlow.js](https://medium.com/tensorflow/getting-started-with-tensorflow-js-50f6783489b2) by Laurence Moroney
 - [Introducing TensorFlow.js](https://medium.com/tensorflow/introducing-tensorflow-js-machine-learning-in-javascript-bf3eab376db) by Josh Gordon and Sara Robinson
 - [Solving the Chrome T-Rex Game with Neural Networks, Genetic Algorithms and TensorFlow.js (Chinese: 前端人工智能？TensorFlow.js 学会游戏通关)](https://zhuanlan.zhihu.com/p/35451395) by [@MagicCube](https://github.com/MagicCube)
+- [A look at how we built the Emoji Scavenger Hunt using TensorFlow.js](https://medium.com/tensorflow/a-look-at-how-we-built-the-emoji-scavenger-hunt-using-tensorflow-js-3d760a7ebfe6) by Jacques Bruwer, JK Kafalas, and Shuhei Iitsuka from Google Brand Studio
 
 ## Notebooks
 - [Introduction to TensorFlow.js](https://beta.observablehq.com/@nsthorat/introduction-to-deeplearn-js) by Nikhil Thorat

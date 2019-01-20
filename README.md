@@ -62,7 +62,8 @@ Add the following code to an HTML file:
 <html>
   <head>
     <!-- Load TensorFlow.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+  
 
     <!-- Place your code in the script tag below. You can also use an external .js file -->
     <script>
@@ -145,3 +146,5 @@ We support porting pre-trained models from:
 - [Tutorials](https://js.tensorflow.org/tutorials)
 - [API reference](https://js.tensorflow.org/api/latest/)
 - [Help mailing list](https://groups.google.com/a/tensorflow.org/forum/#!forum/tfjs)
+
+Thanks <a href="https://www.browserstack.com/">BrowserStack</a> for providing testing support.

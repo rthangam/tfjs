@@ -70,6 +70,7 @@ if (commander.out == null) {
 
 const UNION_DEPENDENCIES: Repo[] = [
   {name: 'Core', identifier: 'tfjs-core'},
+  {name: 'Data', identifier: 'tfjs-data'},
   {name: 'Layers', identifier: 'tfjs-layers'},
   {name: 'Converter', identifier: 'tfjs-converter'}
 ];
@@ -125,7 +126,11 @@ UNION_DEPENDENCIES.forEach(repo => {
   $(`mkdir ${dir}`);
   $(`git clone https://github.com/tensorflow/${repo.identifier} ${dir}`);
 
-  const startCommit = $(`git -C ${dir} rev-list -n 1 v${repoStartVersion}`);
+  const startCommit =
+      $(repoStartVersion != null ?
+            `git -C ${dir} rev-list -n 1 v${repoStartVersion}` :
+            // Get the first commit if there are no tags yet.
+            `git rev-list --max-parents=0 HEAD`);
 
   console.log('Querying commits...');
   // Get subjects, bodies, emails, etc from commit metadata.
@@ -133,8 +138,11 @@ UNION_DEPENDENCIES.forEach(repo => {
   const commitFields = commitFieldQueries.map(query => {
     // Use a unique delimiter so we can split the log.
     const uniqueDelimiter = '--^^&&';
+    const versionQuery = repoStartVersion != null ?
+        `v${repoStartVersion}..v${repoEndVersion}` :
+        `#${startCommit}..v${repoEndVersion}`;
     return $(`git -C ${dir} log --pretty=format:"${query}${uniqueDelimiter}" ` +
-             `v${repoStartVersion}..v${repoEndVersion}`)
+             `${versionQuery}`)
         .trim()
         .split(uniqueDelimiter)
         .slice(0, -1)
