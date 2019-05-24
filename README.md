@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/tensorflow/tfjs.svg?branch=master)](https://travis-ci.org/tensorflow/tfjs)
 # TensorFlow.js
 
 TensorFlow.js is an open-source hardware-accelerated JavaScript library for
@@ -19,7 +18,7 @@ other client-side data.
 ## About this repo
 
 This repository contains the logic and scripts that combine
-two packages:
+three packages:
 - [TensorFlow.js Core](https://github.com/tensorflow/tfjs-core),
   a flexible low-level API, formerly known as *deeplearn.js*.
 - [TensorFlow.js Layers](https://github.com/tensorflow/tfjs-layers),
@@ -63,7 +62,7 @@ Add the following code to an HTML file:
   <head>
     <!-- Load TensorFlow.js -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
-  
+
 
     <!-- Place your code in the script tag below. You can also use an external .js file -->
     <script>
@@ -142,9 +141,10 @@ We support porting pre-trained models from:
 
 [TensorFlow.js](https://js.tensorflow.org) is a part of the
 [TensorFlow](https://www.tensorflow.org) ecosystem. For more info:
+- For help from the community, use [`tensorflow.js`](https://stackoverflow.com/questions/tagged/tensorflow.js) tag on Stack Overflow.
 - [js.tensorflow.org](https://js.tensorflow.org)
 - [Tutorials](https://js.tensorflow.org/tutorials)
 - [API reference](https://js.tensorflow.org/api/latest/)
-- [Help mailing list](https://groups.google.com/a/tensorflow.org/forum/#!forum/tfjs)
+- [Discussion mailing list](https://groups.google.com/a/tensorflow.org/forum/#!forum/tfjs)
 
 Thanks <a href="https://www.browserstack.com/">BrowserStack</a> for providing testing support.

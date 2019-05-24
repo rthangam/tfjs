@@ -4,7 +4,7 @@
     "moduleResolution": "node",
     "noImplicitAny": true,
     "sourceMap": true,
-    "removeComments": false,
+    "removeComments": true,
     "preserveConstEnums": true,
     "declaration": true,
     "target": "es5",
@@ -18,7 +18,10 @@
     "pretty": true,
     "noFallthroughCasesInSwitch": true,
     "allowUnreachableCode": false,
-    "experimentalDecorators": true
+    "esModuleInterop": true
   },
-  "include": ["src/"]
+  "include": [
+    "*.ts",
+    "models/*.ts"
+  ],
 }
